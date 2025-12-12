@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI, sans-serif;
+}
+
+body {
+    background: #0d1117;
+    color: #c9d1d9;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 12%;
+}
+
+.navbar {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 15px 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    margin-left: 18px;
+    opacity: 0.8;
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #58a6ff;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.big-title {
+    font-size: 35px;
+}
+
+.blue {
+    color: #58a6ff;
+}
+
+.subtitle {
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.bio {
+    max-width: 400px;
+    margin: 15px 0 25px;
+}
+
+.github-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background: #30363d;
+}
+
+.avatar {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #30363d;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.repo-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+}
+
+.repo-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    border-top: 1px solid #30363d;
+}
+
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill {
+    padding: 12px 20px;
+    background: #0077ff;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    transition: 0.3s;
+    filter: invert(0%); /* jadi hitam default */
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    filter: invert(40%); /* efek hover */
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 60px 8%;
+    }
+
+    .big-title {
+        font-size: 28px;
+    }
+
+    .avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .home-left {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 5%;
+        text-align: center;
+    }
+
+    .navbar nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .big-title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    table td {
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .skill {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .social-links img {
+        width: 32px;
+    }
+}
+
+@media (max-width: 400px) {
+    .big-title {
+        font-size: 20px;
+    }
+
+    table td {
+        font-size: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+}
